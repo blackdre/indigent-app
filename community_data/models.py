@@ -5,7 +5,7 @@ class Person(models.Model):
     # personal details section
     first_name = models.CharField(max_length=100, unique=True)
     last_name = models.CharField(max_length=100)
-    id_number = models.CharField(max_length=13)
+    id_number = models.CharField(max_length=13, unique=True)
     contact_number = models.CharField(max_length=200, unique=True)
     # Gender selection fields
     GENDER = (
@@ -33,7 +33,7 @@ class Person(models.Model):
         verbose_name_plural = 'people'
 
     def __str__(self):
-        return self.last_name
+        return self.id_number
 
 
 class Residence(models.Model):
