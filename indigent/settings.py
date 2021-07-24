@@ -32,8 +32,10 @@ INSTALLED_APPS = [
     # Local apps
     'community_data',
     # 3rd party Libraries
-    'rest_framework',
-    'corsheaders',
+    'rest_framework',  # rest framework library
+    'rest_framework.authtoken',  # rest framework authentication
+    'corsheaders',  # Django CORS Library
+    'dj_rest_auth',
 ]
 
 DATABASES = {
@@ -125,7 +127,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Rest Framework Settings
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny'
+        # Only Authenticated users can view the API
+        'rest_framework.permissions.IsAuthenticated'
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.SessionAuthentication',  # Session Authentication
+        'rest_framework.authentication.TokenAuthentication',  # Token Authentication
     ]
 }
 
