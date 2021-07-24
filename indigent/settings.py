@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',  # rest framework authentication
     'corsheaders',  # Django CORS Library
     'dj_rest_auth',
+    'drf_yasg'
 ]
 
 DATABASES = {
