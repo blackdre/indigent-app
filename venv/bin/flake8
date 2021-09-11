@@ -1,4 +1,4 @@
-#!/home/bless/Documents/vue-django/indigent-app/venv/bin/python
+#!/home/bless/Documents/Work/indigent-app/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
