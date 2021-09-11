@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # 3rd party Libraries
     'rest_framework',
     'corsheaders',
+    'drf_yasg'
 ]
 
 
